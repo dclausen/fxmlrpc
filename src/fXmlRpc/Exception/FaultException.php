@@ -29,7 +29,8 @@ final class FaultException extends RuntimeException
 
     public static function fault($response)
     {
-        $exception = new static(isset($response['faultString']) ? $response['faultString'] : 'Unknown');
+        $errorString = is_array($response['faultString']) ? implode(' ', $response['faultString']) : $response['faultString'];
+        $exception = new static(isset($errorString) ? $errorString : 'Unknown');
         $exception->faultCode = isset($response['faultCode']) ? $response['faultCode'] : 0;
 
         return $exception;
