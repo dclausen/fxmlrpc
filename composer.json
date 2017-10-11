@@ -1,5 +1,5 @@
 {
-    "name": "lstrojny/fxmlrpc",
+    "name": "dclausen/fxmlrpc",
     "description": "Fast and tiny XML/RPC client with bridges for various HTTP clients",
     "keywords": ["xmlrpc", "xml", "api", "rpc", "performance"],
     "license": "MIT",
